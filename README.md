@@ -1,23 +1,90 @@
-A landing page for [`aldi.js.org`](https://aldi.js.org/) that introduces [aldi.my.id](https://aldi.my.id/) and gives visitors an overview of the website's Astro `src/` structure.
+# Aldi.js.org
 
-## Publish on GitHub Pages
+Personal developer landing page for **Aldi Setiadi Putra**, featuring my projects, website, and the technologies I use.
 
-This project is intended for the repository `xaldiy/astro`.
+## 🌐 Website
 
-1. Put `index.html` in the root of the repository.
-2. Open **Settings → Pages** in GitHub.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch you publish from (usually `main`) and the `/ (root)` folder.
-5. Save and wait for GitHub Pages to publish the site.
+- **Main Website:** [aldi.my.id](https://aldi.my.id)
+- **Developer Landing Page:** [aldi.js.org](https://aldi.js.org)
+- **Astro Source Repository:** [xaldiy.github.io/astro](https://github.com/xaldiy/astro)
 
-If you want the page available at `https://xaldiy.github.io/astro/`, the repository must be named `astro` and Pages must be configured to publish from that repository.
+## 🚀 What Is Astro?
 
-## Point `aldi.js.org` to GitHub Pages
+**[Astro](https://astro.build/)** is an open-source web framework in the JavaScript ecosystem designed for building fast, content-focused websites.
 
-Configure the domain's DNS according to the current GitHub Pages custom-domain instructions, then add `aldi.js.org` in the repository's **Settings → Pages → Custom domain**. Follow the DNS records GitHub shows for your setup and wait for DNS propagation before enabling HTTPS.
+Astro supports JavaScript and TypeScript, and uses its own `.astro` component format. Astro components allow developers to combine HTML-like markup, JavaScript expressions, and scoped CSS in a single file.
 
-## About
+Key features include:
 
-The page uses plain HTML and CSS, with a tiny JavaScript snippet for the current year. It does not require an Astro build or npm dependencies, so it can be published directly as a static GitHub Pages site.
+- **JavaScript ecosystem:** Astro works with JavaScript and TypeScript, alongside tools and packages from the broader JavaScript ecosystem.
+- **Component-based architecture:** Build reusable UI components using `.astro` files.
+- **HTML-first rendering:** Astro renders pages to HTML by default and sends client-side JavaScript only when needed.
+- **File-based routing:** Files inside `src/pages/` automatically define website routes.
+- **Performance-focused:** Designed to deliver fast websites with minimal unnecessary JavaScript in the browser.
 
-The source-tree view is an intentionally abbreviated overview of the `src/` tree supplied for this page; it is not a complete file explorer.
+Astro makes it possible to build modern websites while keeping the delivered pages lightweight and efficient.
+
+Learn more:
+- [Astro Official Website](https://astro.build/)
+- [Astro Documentation](https://docs.astro.build/)
+
+## 📂 Project Structure
+
+The Astro project uses a structured source directory:
+
+```text
+src/
+├── components/
+│   ├── ChatWidget.astro
+│   ├── Footer.astro
+│   └── Navbar.astro
+├── layouts/
+│   └── Layout.astro
+├── lib/
+│   └── firebase.js
+├── pages/
+│   ├── api/
+│   ├── about.astro
+│   ├── contact.astro
+│   ├── galeri.astro
+│   ├── music.astro
+│   ├── tools.astro
+│   └── ...
+├── styles/
+├── utils/
+├── middleware.ts
+└── ...
+```
+
+This structure separates reusable components, page layouts, routes, libraries, styles, and utility functions.
+
+## 🛠️ Technologies
+
+- **Astro** — Web framework
+- **JavaScript** — Client-side logic and application functionality
+- **TypeScript** — Typed JavaScript for selected modules
+- **HTML5** — Page structure
+- **CSS3** — Styling and responsive layouts
+- **Firebase** — Backend services used by selected features
+- **GitHub Pages** — Hosting for the developer landing page
+
+## 📦 Deployment
+
+The standalone developer landing page uses HTML, CSS, and a small amount of JavaScript. The main website, [aldi.my.id](https://aldi.my.id), is built with Astro.
+
+To deploy the landing page using GitHub Pages:
+
+1. Push `index.html` and `README.md` to the repository.
+2. Open the repository's **Settings → Pages**.
+3. Select the appropriate branch and root directory as the deployment source.
+4. Save the settings and wait for GitHub Pages to publish the website.
+
+### Custom Domain
+
+To use `aldi.js.org`, configure the domain's DNS settings to point to the GitHub Pages deployment, then add `aldi.js.org` in the repository's **Settings → Pages → Custom domain**.
+
+Domain availability and approval depend on the domain provider's current policies.
+
+## 📄 License
+
+This project is a personal developer landing page. Please contact the owner before reusing any original branding or personal content.
