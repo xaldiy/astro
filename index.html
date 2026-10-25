@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0c0b">
-  <meta name="description" content="A look inside the Astro-powered source structure of aldi.my.id, built by Aldi Setiadi Putra.">
+  <meta name="description" content="Explore Astro, the JavaScript and TypeScript web framework used to organize the source structure of aldi.my.id.">
   <title>Aldi — Built with Astro</title>
   <style>
     :root {
@@ -92,6 +92,16 @@
     pre { margin: 0; color: #cbd5cc; font: 13px/1.85 var(--mono); white-space: pre; }
     .folder { color: var(--green); } .file { color: #cbd5cc; } .note { color: #758278; }
     .tree-foot { padding: 12px 16px; border-top: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
+
+    .astro-section { display: grid; grid-template-columns: 1.05fr .95fr; gap: 16px; }
+    .astro-copy, .astro-facts { border: 1px solid var(--line); border-radius: 12px; background: #101310b8; padding: clamp(20px, 4vw, 30px); }
+    .astro-copy h3 { margin: 12px 0; font-size: clamp(23px, 3vw, 32px); line-height: 1.15; letter-spacing: -.04em; }
+    .astro-copy p, .astro-facts p { color: var(--muted); font-size: 14px; }
+    .code-chip { display: inline-block; margin: 4px 4px 0 0; padding: 5px 8px; border: 1px solid #a6e3ad35; border-radius: 6px; color: var(--green); background: #a6e3ad0b; font: 11px var(--mono); }
+    .fact { padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border-bottom: 0; padding-bottom: 0; }
+    .fact strong { display: block; font-size: 14px; margin-bottom: 3px; }
+    .fact p { margin: 0; }
     .architecture { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
     .arch-card { padding: 18px; border: 1px solid var(--line); border-radius: 10px; background: #101310a8; }
     .arch-card .icon { color: var(--gold); font: 20px var(--mono); }
@@ -111,6 +121,7 @@
       .section-head { display: block; }
       .section-head p { margin-top: 8px; }
       .architecture { grid-template-columns: 1fr; }
+      .astro-section { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
   </style>
@@ -122,6 +133,7 @@
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#website">Website</a>
+      <a href="#astro">Astro</a>
       <a href="#source">Source structure</a>
       <a href="https://github.com/xaldiy/astro" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
@@ -142,7 +154,7 @@
         <a class="btn" href="https://github.com/xaldiy/astro" target="_blank" rel="noreferrer">View repository ↗</a>
       </div>
       <div class="meta">
-        <span>Astro</span><span>JavaScript & TypeScript</span><span>Learning in public</span>
+        <span>Astro framework</span><span>JavaScript & TypeScript</span><span>Learning in public</span>
       </div>
     </section>
 
@@ -171,6 +183,58 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <section id="astro">
+      <div class="section-head">
+        <h2>What is <span style="color:var(--green)">Astro?</span></h2>
+        <p>The JavaScript-powered web framework behind this site's architecture.</p>
+      </div>
+      <div class="astro-section">
+        <article class="astro-copy">
+          <div class="mini-label">A modern web framework</div>
+          <h3>Build with JavaScript.<br>Ship less browser JS.</h3>
+          <p>
+            <strong>Astro</strong> is an open-source web framework for building content-focused websites.
+            It lets developers write components using Astro's <code>.astro</code> format alongside
+            JavaScript or TypeScript, HTML, and CSS. Astro renders pages to HTML by default and sends
+            client-side JavaScript only where interactive features need it.
+          </p>
+          <p>
+            In <strong>aldi.my.id</strong>, the <code>src/</code> directory separates reusable UI components,
+            page routes, layouts, styles, utilities, and integrations into maintainable parts.
+          </p>
+          <div>
+            <span class="code-chip">JavaScript</span>
+            <span class="code-chip">TypeScript</span>
+            <span class="code-chip">.astro components</span>
+            <span class="code-chip">HTML + CSS</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://astro.build/" target="_blank" rel="noreferrer">Explore Astro ↗</a>
+            <a class="btn" href="https://docs.astro.build/" target="_blank" rel="noreferrer">Read the docs ↗</a>
+          </div>
+        </article>
+        <aside class="astro-facts">
+          <div class="fact">
+            <strong>01 / JavaScript ecosystem</strong>
+            <p>Astro works in the JavaScript ecosystem and supports JavaScript and TypeScript in project code.</p>
+          </div>
+          <div class="fact">
+            <strong>02 / Component-based</strong>
+            <p>Reusable components and layouts help keep shared interface elements consistent.</p>
+          </div>
+          <div class="fact">
+            <strong>03 / HTML-first output</strong>
+            <p>Astro renders HTML by default, with client-side JavaScript added for interactive UI when needed.</p>
+          </div>
+          <div class="fact">
+            <strong>04 / File-based routing</strong>
+            <p>Files inside <code>src/pages/</code> map to website routes, making a large site easier to organize.</p>
+          </div>
+        </aside>
       </div>
     </section>
 
